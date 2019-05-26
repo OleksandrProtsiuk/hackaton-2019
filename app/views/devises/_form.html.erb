@@ -1,0 +1,37 @@
+<%= form_with(model: devise, local: true, authenticity_token: false) do |form| %>
+  <% if devise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(devise.errors.count, "error") %> prohibited this devise from being saved:</h2>
+
+      <ul>
+        <% devise.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pincode %>
+    <%= form.number_field :pincode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volume %>
+    <%= form.number_field :volume %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temperatura %>
+    <%= form.text_field :temperatura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status, :value => false %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

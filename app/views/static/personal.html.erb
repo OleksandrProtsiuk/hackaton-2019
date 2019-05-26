@@ -1,0 +1,138 @@
+
+<section class="total-section">
+</section>
+ <div align="center">
+
+   <div class="shadow">
+   <div id="counter">
+     <h1 class="total-main"> <%= total %> </h1>
+   </div>
+ </div>
+</div>
+
+<section class="my-tabs">
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <b-tabs content-class="mt-3">
+      <b-tab title="Статистика" active>
+
+
+          <b-row>
+            <b-col>
+              <div style="width: 40%" align="center">
+                <canvas id="myChart" ></canvas>
+                <h6>Витрачено за місяць </h6>
+              </div>
+            </b-col>
+
+            <b-col>
+              <div style="width: 30%" align="center">
+                <canvas id="weekChart" ></canvas>
+                <h6>Витрачено за тиждень </h6>
+              </div>
+            </b-col>
+
+            <b-col>
+              <div style="width: 30%" align="center">
+                <canvas id="dayChart" ></canvas>
+                <h6>Витрачено за добу </h6>
+              </div>
+            </b-col>
+
+          </b-row>
+        </b-container>
+      </b-tab>
+
+      <b-tab title="Налаштування">
+
+
+<b-form>
+        <b-container class="bv-example-row">
+          <b-row>
+            <b-col>
+              <label id="input-group-1__BV_label_" for="input-1" class="d-block">Норма витрат на місяць</label>
+            </b-col>
+            <b-col>
+              <input id="input-1" type="text" placeholder="м.куб"
+                     required="required" aria-required="true" class="form-control">
+            </b-col>
+            <div class="w-100">
+              <b-row> <p>&nbsp;</p></b-row>
+            </div>
+            <b-col>
+              <label id="input-group-2__BV_label_" for="input-2" class="d-block">Надсилати показники</label>
+            </b-col>
+            <b-col>
+                <b-row>
+                  <b-col>
+                    <input id="input-2" type="url" placeholder="URL-адреса"
+                           required="required" aria-required="true" class="form-control"
+                           aria-describedby="input-group-2__BV_description_">
+                  </b-col>
+                  <b-col>
+                    <input id="input-4" type="date" placeholder="Дата"
+                           required="required" aria-required="true" class="form-control"
+                           aria-describedby="input-group-4__BV_description_">
+                  </b-col>
+                </b-row>
+              <div class="w-100">
+                <b-row> <p>&nbsp;</p></b-row>
+              </div>
+              <b-row>
+                <b-col>
+                  <p>&nbsp;</p>
+                </b-col>
+                <b-col>
+                  <b-form-checkbox value="me">Враховувати термокорекцію</b-form-checkbox>
+                </b-col>
+              </b-row>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+
+            </b-col>
+          </b-row>
+        </b-container>
+</b-form>
+
+
+      </b-tab>
+    </b-tabs>
+  </div>
+</section>
+
+
+
+<section class="leak">
+
+  <% gas_leak.reverse_each do |element| %>
+    <hr >
+    <div align="center">
+    <div ><%= image_tag('red_alarm.png') %></div>
+  <div class="alert-lable">
+    <b-container>
+      <b-row>
+        <b-col cols="10"></b-col>
+        <b-col>
+          <small>
+              <%= element %>
+           </small>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
+  </div>
+    <br>
+    <br>
+    <br>
+  <% end %>
+
+</section>
+<br>
+<br>
+<br>
+
+
+<div hidden><% to_front %></div>

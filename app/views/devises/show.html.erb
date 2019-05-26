@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @devise.pincode %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @devise.volume %>
+</p>
+
+<p>
+  <strong>Temperatura:</strong>
+  <%= @devise.temperatura %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @devise.status %>
+</p>
+
+<%= link_to 'Edit', edit_devise_path(@devise) %> |
+<%= link_to 'Back', devises_path %>
