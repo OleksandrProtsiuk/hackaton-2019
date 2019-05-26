@@ -6,12 +6,16 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>v
   </head>
 
   <body>
-    <%= yield %>
-
-
+  <div id="app">
+    <b-container>
+      <%= render 'layouts/header' %>
+      <%= yield %>
+    </b-container>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </div>
   </body>
 </html>

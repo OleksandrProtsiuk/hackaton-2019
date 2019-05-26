@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+    font-family: 'Bebas';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Teddy Bear'), url('fonts/BebasBold.ttf') format('truetype');
+}
+
+header {
+    background-color: orange;
+    height: 300px;
+}
+
+.total-section {
+    background-color: orange;
+    height: 200px;
+}
+
+hr.head-line {
+    border: 10px solid green;
+    border-radius: 5px;
+}
+
+.total-main {
+    font-family: 'Bebas';
+    font-size: 48px;
+}
+
+#counter {
+    border: 1px solid gray;
+    border-radius: 1px;
+    height: 60px;
+    width: 500px;
+}
+
+.shadow {
+    background-color: #F7F7F7;
+    box-shadow: 0 0 15px rgba(170,170, 170, 0.9); /* Параметры тени */
+    padding: 10px;
+    height: 80px;
+    width: 1000px;
+    z-index: 9999;
+    margin-top: -40px;
+}
+
+.diagram {
+    background: #ECF5E4;
+    width: 100px; height: 100px;
+    text-align: center;
+    font: 40px/100px Bebas;
+    border: 24px solid #95CD8B;
+    border-right: 24px solid #D0E6BB;
+    border-radius: 100px;
+}
+
+.alert {
+    background-color: #F7F7F7;
+    box-shadow: 0 0 15px rgba(170,170, 170, 0.9); /* Параметры тени */
+    padding: 10px;
+    width: 1000px;
+    z-index: 9999;
+    vertical-align: middle;
+
+}
+
+.alert-lable {
+    z-index: 9999;
+    vertical-align: middle;
+    margin-top: -80px;
+}
+
+/* <сдвиг по x> <сдвиг по y> <радиус размытия> <растяжение> <цвет>
