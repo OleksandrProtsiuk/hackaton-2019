@@ -6,7 +6,7 @@ ruby '2.6.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc1'
 
-gem 'gon', '~> 6.2', '>= 6.2.1'
+gem 'gon', '~> 6.4'
 gem 'redis'
 
 # Use postgresql as the database for Active Record
